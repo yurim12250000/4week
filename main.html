@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmongUs</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <style>
+        canvas{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="GameScreenCanvas" width="1024" height="600">학번그리기</canvas>
+    <script>
+        var canvas = document.getElementById("GameScreenCanvas");
+        var ctx = canvas.getContext("2d");
+
+        var studentID = 2020304023;
+
+        function drawNum(num) {
+            var startX = 5;
+            var startY = 10; 
+            var lineWidth = 4; 
+            var gap = 8; 
+
+            // 첫 번째 선 그리기
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX + 50, startY);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            // 두 번째 선 그리기 (간격 적용)
+            startX += 50 + gap;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX, startY + 50);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            // 세 번째 선 그리기 (간격 적용)
+            startX -= 60; 
+            startY += 50; 
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX + 50, startY);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            // 네 번째 선 그리기 (간격 적용)
+            startX += -6 + gap;
+            startY += 10;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX, startY + 50);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            // 다섯 번째 선 그리기
+            startX += gap;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY + 50);
+            ctx.lineTo(startX + 50, startY + 50);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            //여섯 번째 선 그리기
+            startX += 100;
+            startY += -60;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX, startY + 50);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            //일곱 번째 선 그리기
+            startX += 0;
+            startY += 65;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX, startY + 50);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            //여덟 번째 선 그리기
+            startX -= -5; 
+            startY += 50; 
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX + 50, startY);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            //9번째 선
+            startX -= 0; 
+            startY += -117; 
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX + 50, startY);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            //10번째 선 그리기
+            startX += 53;
+            startY += 5;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX, startY + 50);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            //11번째 선
+            startX += 3;
+            startY += 58;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX, startY + 50);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            // 첫 번째 선 그리기
+            startX += 19;
+            startY += -60;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX + 50, startY);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            // 두 번째 선 그리기 (간격 적용)
+            startX += 50 + gap;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX, startY + 50);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            // 세 번째 선 그리기 (간격 적용)
+            startX -= 60;
+            startY += 50; 
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX + 50, startY);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            // 네 번째 선 그리기 (간격 적용)
+            startX += -6 + gap;
+            startY += 10;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX, startY + 50);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            // 다섯 번째 선 그리기
+            startX += gap;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY + 50);
+            ctx.lineTo(startX + 50, startY + 50);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            //첫번째
+            startX -= -60; 
+            startY += -60;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX + 50, startY);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            // 두 번째 선 그리기 (간격 적용)
+            startX += 50 + gap;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX, startY + 50);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            // 세 번째 선 그리기 (간격 적용)
+            startX -= 60; 
+            startY += 50; 
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX + 50, startY);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            // 네 번째 선 그리기 (간격 적용)
+            startX += -6 + gap;
+            startY += 10;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX, startY + 50);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            // 다섯 번째 선 그리기
+            startX += gap;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY + 50);
+            ctx.lineTo(startX + 50, startY + 50);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            // 첫 번째 선 그리기
+            startX = 330;
+            startY = 13;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX + 50, startY);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            // 두 번째 선 그리기 (간격 적용)
+            startX += 50 + gap;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX, startY + 50);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            // 세 번째 선 그리기 (간격 적용)
+            startX -= 60; 
+            startY += 50; 
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX + 50, startY);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            // 네 번째 선 그리기 (간격 적용)
+            startX += -6 + gap;
+            startY += 10;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX, startY + 50);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            // 다섯 번째 선 그리기
+            startX += gap;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY + 50);
+            ctx.lineTo(startX + 50, startY + 50);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+            
+            //9번째 선
+            startX -= -59; 
+            startY += -60; 
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX + 50, startY);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            //10번째 선 그리기
+            startX += 53;
+            startY += 5;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX, startY + 50);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            //11번째 선
+            startX += 3;
+            startY += 58;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX, startY + 50);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            //여섯 번째 선 그리기
+            startX += 10;
+            startY += -62;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX, startY + 50);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            //일곱 번째 선 그리기
+            startX += 0;
+            startY += 65;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX, startY + 50);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            //여덟 번째 선 그리기
+            startX -= -5; 
+            startY += 50; 
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX + 50, startY);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            //9번째 선
+            startX -= 0; 
+            startY += -117; 
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX + 50, startY);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            //10번째 선 그리기
+            startX += 53;
+            startY += 5;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX, startY + 50);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            //11번째 선
+            startX += 3;
+            startY += 58;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX, startY + 50);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            // 첫 번째 선 그리기
+            startX = 540;
+            startY = 14;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX + 50, startY);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            // 두 번째 선 그리기 (간격 적용)
+            startX = 535;
+            startY = 20;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX, startY + 50);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            // 세 번째 선 그리기 (간격 적용)
+            startX = 540; 
+            startY = 73; 
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX + 50, startY);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            // 네 번째 선 그리기 (간격 적용)
+            startX = 594;
+            startY = 76;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX, startY + 50);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            // 다섯 번째 선 그리기
+            startX = 540;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY + 50);
+            ctx.lineTo(startX + 50, startY + 50);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            // 첫 번째 선 그리기
+            startX = 605;
+            startY = 14;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX + 50, startY);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            // 두 번째 선 그리기 (간격 적용)
+            startX = 600;
+            startY = 20;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX, startY + 50);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            // 세 번째 선 그리기 (간격 적용)
+            startX = 605; 
+            startY = 73; 
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX + 50, startY);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            // 네 번째 선 그리기 (간격 적용)
+            startX = 659;
+            startY = 76;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX, startY + 50);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            // 다섯 번째 선 그리기
+            startX = 605;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY + 50);
+            ctx.lineTo(startX + 50, startY + 50);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+
+            
+            startX = 600;
+            startY = 75;
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(startX, startY + 50);
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+            ctx.closePath();
+            
+        }
+       
+        drawNum(studentID);
+    </script>
+</body>
+</html>
