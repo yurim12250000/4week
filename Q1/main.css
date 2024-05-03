@@ -1,0 +1,17 @@
+html {
+    background-color: rgb(72, 153, 242);
+    /* height: 100%; */
+}
+body {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+canvas {
+    background-color: rgb(180, 180, 180);
+    margin: 50px;
+    width: 600px;
+    height: 800px;
+}
